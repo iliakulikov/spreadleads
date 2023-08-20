@@ -6,7 +6,7 @@
   --ui-color-n-300: #aeaeae;
   --ui-color-n-500: #353535;
   --ui-color-n-900: #1a1a1a;
-  --ui-color-background-primary: #111830;
+  --ui-color-background-primary: #182246;
   --ui-color-typography-heading: #4385f5;
   --ui-color-typography-body: var(--ui-color-n-000);
   --ui-color-typography-note: var(--ui-color-n-000);
@@ -120,16 +120,18 @@ img {
   flex-direction: column;
   row-gap: var(--ui-gap-cta);
 }
-#demo-button,
-#test {
+#demo-button {
   color: #000;
   padding: 10px 17.5px;
+  margin-top: 1rem;
   text-decoration: none;
-  border-radius: 30px;
+  border-radius: 10px;
   opacity: 1;
-  background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  animation: gradient 15s ease infinite;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background-size: 400% 400%;
+  width: 175px;
+  height: 46px;
 }
 @keyframes gradient {
   0% {
@@ -231,23 +233,27 @@ input[type="text"] {
   padding-top: 1.25rem;
   position: absolute;
   width: 100%;
+  z-index: 1;
 }
 .ui-section-header__layout {
   justify-content: space-between;
 }
-.bar1 {
-  width: 40px;
-  height: 2px;
+.bar1, .bar2 {
+  width: 27.2px;
+  height: 3px;
   background-color: #fff;
-  margin: 7px 0;
+  margin: 7px 0 7px 26.8px; 
   transition: 0.4s;
+  border-radius: 15px;
 }
-.bar2 {
-  width: 30px;
-  height: 2px;
+
+.bar3 {
+  width: 17.68px; /* 65% of bar1 and bar2's width */
+  height: 3px;
   background-color: #fff;
-  margin: 7px 0;
+  margin: 7px 0 7px 36.32px; /* Adjusted left margin for alignment */
   transition: 0.4s;
+  border-radius: 15px;
 }
 .hamburger {
   display: inline-block;
@@ -284,24 +290,42 @@ input[type="text"] {
   margin-left: 50px;
 }
 .ui-section-hero {
-  padding-bottom: 5rem;
-  padding-top: 8rem;
+  padding-bottom: 14rem;
+  padding-top: 6rem;
   text-align: center;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(/img/background_hero.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
   color: #fff;
   height: auto;
+  position: relative;  /* this will ensure the pseudo-element is contained within the section */
 }
+
+.ui-section-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(/img/background_hero.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    opacity: 0.7;
+    z-index: -1;  /* this will ensure the pseudo-element sits behind the content */
+}
+
 .ui-section-hero--image {
   margin-bottom: 20px;
   margin-top: 0;
 }
-.headline-hero {
+.headline-hero, .ui-text-intro {
   color: #fff;
+  background-image: 
+  linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  border-radius: 10px;
+  padding: 10px;
 }
 .ui-section-feature {
   padding-bottom: 5rem;
@@ -336,6 +360,10 @@ input[type="text"] {
 }
 .split-form-text {
   color: #fff;
+}
+.ui-section-form  {
+  margin-left: auto;
+  margin-right: auto;
 }
 .button-input {
   cursor: pointer;
@@ -503,7 +531,7 @@ details details summary {
 }
 @media screen and (min-width: 48rem) {
   :root {
-    --ui-typography-h1: 2.1875rem;
+    /* --ui-typography-h1: 2.1875rem; */
     --ui-typography-h2: 1.75rem;
     --ui-typography-p: 1.125rem;
     --ui-typography-s: 0.875rem;
@@ -535,7 +563,7 @@ details details summary {
     width: calc((var(--ui-layout-grid) * 4) + (var(--ui-layout-gutter) * 3));
   }
   .ui-layout-column-6 {
-    width: calc((var(--ui-layout-grid) * 6) + (var(--ui-layout-gutter) * 5));
+    width: 70%;
   }
   .ui-component-list--item {
     background-size: 1.25rem;
@@ -545,6 +573,18 @@ details details summary {
     padding-bottom: 2rem;
     padding-top: 2rem;
   }
+
+  .ui-section-hero {
+    padding-bottom: 18rem;
+    padding-top: 6rem;
+  }
+
+  .ui-section-form  {
+  width: calc((var(--ui-layout-grid) * 6) + (var(--ui-layout-gutter) * 5));
+  margin-left: auto;
+  margin-right: auto;
+}
+
   .ui-section-feature__layout:nth-of-type(odd) div {
     grid-row-start: initial;
   }
@@ -582,7 +622,7 @@ details details summary {
 }
 @media screen and (min-width: 75rem) {
   :root {
-    --ui-typography-h1: 2.75rem;
+    --ui-typography-h1: 2.4rem;
     --ui-typography-h2: 2.1875rem;
     --ui-typography-h4: 1.4375rem;
     --ui-typography-margin-heading: 1rem;
@@ -606,8 +646,8 @@ details details summary {
     padding-top: 3rem;
   }
   .ui-section-hero {
-    padding-bottom: 12rem;
-    padding-top: 12rem;
+    padding-bottom: 24rem;
+    padding-top: 10rem;
   }
   .ui-section-feature {
     padding-bottom: 5rem;
@@ -631,5 +671,26 @@ details details summary {
   .ui-section-footer {
     padding-bottom: 3rem;
     padding-top: 3rem;
+  }
+}
+
+@media screen and (min-width: 85.4375rem) {
+  .ui-section-hero {
+    padding-bottom: 20rem;
+    padding-top: 10rem;
+  }
+}
+
+@media screen and (min-width: 100rem) {
+  .ui-section-hero {
+    padding-bottom: 26rem;
+    padding-top: 10rem;
+  }
+}
+
+@media screen and (min-width: 120rem) {
+  .ui-section-hero {
+    padding-bottom: 34rem;
+    padding-top: 10rem;
   }
 }
