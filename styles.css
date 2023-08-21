@@ -117,10 +117,11 @@ img {
   display: grid;
 }
 .ui-component-cta {
-  flex-direction: column;
+  flex-direction: row;
   row-gap: var(--ui-gap-cta);
+  margin-top: 3rem;
 }
-#demo-button {
+.demo-button-class {
   color: #000;
   padding: 10px 17.5px;
   margin-top: 1rem;
@@ -133,6 +134,30 @@ img {
   width: 175px;
   height: 46px;
 }
+#live-demo-button {
+  margin-right: 1rem; /* adjust the value as you see fit */
+}
+
+/* main {
+  position: relative;
+} */
+
+.mac {
+  position: absolute;
+  top: calc(100% + 2rem); /* This positions it at the bottom of the container + 2rem */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.ui-layout-column-6.ui-layout-column-center {
+  position: relative;
+}
+
+.ui-section-feature .ui-layout-container {
+  margin-top: 30rem;
+}
+
 @keyframes gradient {
   0% {
     background-position: 0 50%;
@@ -147,6 +172,7 @@ img {
 #test:hover {
   opacity: 0.8;
 }
+
 .ui-component-button {
   border: 0.0625rem solid var(--ui-color-brand);
   border-radius: var(--ui-radius-button);
@@ -290,6 +316,7 @@ input[type="text"] {
   margin-left: 50px;
 }
 .ui-section-hero {
+  margin-bottom: -20rem;  /* This reduces the bottom space by the same amount the image is adjusted. */
   padding-bottom: 14rem;
   padding-top: 6rem;
   text-align: center;
@@ -323,36 +350,17 @@ input[type="text"] {
 .headline-hero, .ui-text-intro {
   color: #fff;
   background-image: 
-  linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   border-radius: 10px;
-  padding: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 .ui-section-feature {
   padding-bottom: 5rem;
-  padding-top: 3rem;
-}
-.ui-section-feature__layout {
-  row-gap: var(--ui-gap-feature);
-}
-.ui-section-feature__layout:nth-of-type(odd) div {
-  grid-row-start: 1;
-}
-.ui-section-feature__layout:nth-of-type(even) {
-  margin-bottom: 5rem;
-  margin-top: 5rem;
-}
-.ui-image-half-left {
-  border-radius: 5px;
-}
-.ui-image-half-right {
-  border-radius: 5px;
-}
-.ui-component-list--item-check {
-  background-image: url(http://spreadleads.com/img/check.svg);
+  /* padding-top: 3rem; */
 }
 .ui-section-test {
   height: auto;
-  background-image: url(http://spreadleads.com/http://spreadleads.com/img/pattern_demo.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -529,6 +537,25 @@ details details summary {
   text-decoration: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+@media screen and (min-width: 28rem) {
+  .ui-section-feature .ui-layout-container {
+    margin-top: 35rem;
+  }
+}
+
+@media screen and (min-width: 33rem) {
+  .ui-section-feature .ui-layout-container {
+    margin-top: 40rem;
+  }
+}
+
+@media screen and (min-width: 39rem) {
+  .ui-section-feature .ui-layout-container {
+    margin-top: 45rem;
+  }
+}
+
 @media screen and (min-width: 48rem) {
   :root {
     /* --ui-typography-h1: 2.1875rem; */
@@ -542,12 +569,7 @@ details details summary {
     --ui-gap-feature: 3rem;
     --ui-gap-testimonial: 3rem;
   }
-  .ui-image-half-left {
-    border-radius: 5px;
-  }
-  .ui-image-half-right {
-    border-radius: 5px;
-  }
+
   .ui-layout-column-center,
   .ui-layout-container {
     margin-left: auto;
@@ -574,6 +596,10 @@ details details summary {
     padding-top: 2rem;
   }
 
+  .ui-section-feature .ui-layout-container {
+    margin-top: 35rem;
+  }
+
   .ui-section-hero {
     padding-bottom: 18rem;
     padding-top: 6rem;
@@ -585,9 +611,6 @@ details details summary {
   margin-right: auto;
 }
 
-  .ui-section-feature__layout:nth-of-type(odd) div {
-    grid-row-start: initial;
-  }
   .ui-section-footer {
     padding-bottom: 2rem;
     padding-top: 2rem;
@@ -606,6 +629,13 @@ details details summary {
     min-height: 50vh;
   }
 }
+
+@media screen and (min-width:61rem) {
+  .ui-section-feature .ui-layout-container {
+    margin-top: 45rem;
+  }
+}
+
 @media screen and (min-width: 64rem) {
   :root {
     --ui-layout-container: 0;
@@ -653,10 +683,6 @@ details details summary {
     padding-bottom: 5rem;
     padding-top: 5rem;
   }
-  .ui-section-feature__layout:nth-of-type(even) {
-    margin-bottom: 7.5rem;
-    margin-top: 7.5rem;
-  }
   .ui-component-list-feature {
     column-gap: var(--ui-layout-gutter);
     grid-template-columns: repeat(2, 1fr);
@@ -686,11 +712,17 @@ details details summary {
     padding-bottom: 26rem;
     padding-top: 10rem;
   }
+  .ui-section-feature .ui-layout-container {
+    margin-top: 35rem;
+  }
 }
 
 @media screen and (min-width: 120rem) {
   .ui-section-hero {
     padding-bottom: 34rem;
     padding-top: 10rem;
+  }
+  .ui-section-feature .ui-layout-container {
+    margin-top: 30rem;
   }
 }
