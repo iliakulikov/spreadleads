@@ -225,7 +225,7 @@ input[type="text"] {
   justify-content: center;
   position: relative;
   height: 46px;
-  line-height: 46px;
+  /* line-height: 46px; */
 }
 .ui-component-button-form:hover {
   opacity: 0.8;
@@ -343,6 +343,33 @@ input[type="text"] {
     z-index: -1;  /* this will ensure the pseudo-element sits behind the content */
 }
 
+.ui-section-hero-demo {
+  padding-bottom: 4rem;
+  padding-top: 6rem;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  color: #fff;
+  height: auto;
+  position: relative;
+}
+
+.ui-section-hero-demo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(/img/background_hero.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  opacity: 0.7;
+  z-index: -1;  /* this will ensure the pseudo-element sits behind the content */
+}
+
 .ui-section-hero--image {
   margin-bottom: 20px;
   margin-top: 0;
@@ -416,8 +443,8 @@ details details summary {
 }
 .ui-section-close {
   background-color: var(--ui-color-background-secondary);
-  padding-top: 0;
-  padding-bottom: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
   text-align: center;
 }
 .reco {
@@ -458,6 +485,28 @@ details details summary {
   background-image: linear-gradient(var(--ui-color-brand), #000);
   z-index: 0;
 }
+
+.loader {
+  position: absolute;
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid #0035F2; 
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+  z-index: -1;
+  margin-top: 100px;
+  margin-left: 10%;
+}
+
+.loader-text {
+  z-index: -1;
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 10%;
+  color: white;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0);
@@ -466,6 +515,15 @@ details details summary {
     transform: rotate(360deg);
   }
 }
+
+iframe {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: 1;
+}
+
 .split-form-text {
   color: #fff;
 }
@@ -537,6 +595,8 @@ details details summary {
   text-decoration: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+
 
 @media screen and (min-width: 28rem) {
   .ui-section-feature .ui-layout-container {
