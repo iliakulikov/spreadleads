@@ -138,16 +138,19 @@ img {
   margin-right: 1rem; /* adjust the value as you see fit */
 }
 
-/* main {
-  position: relative;
-} */
-
 .mac {
   position: absolute;
   top: calc(100% + 2rem); /* This positions it at the bottom of the container + 2rem */
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
+}
+
+.headline-centered {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 .ui-layout-column-6.ui-layout-column-center {
@@ -395,7 +398,41 @@ input[type="text"] {
 }
 .split-form-text {
   color: #fff;
+  text-align: center;
 }
+
+.feature-divs {
+  margin-bottom: 1rem;
+}
+
+
+.img-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; 
+}
+
+.left-img {
+  margin-right: 1rem; 
+}
+
+.right-img {
+  margin-left: 1rem; 
+}
+
+.img-container img.left-img,
+.img-container img.right-img {
+  margin: 0; /* Reset the margin */
+}
+
+.arrow-img {
+  position: absolute;
+  left: 50%; 
+  top: 50%; 
+  transform: translate(-50%, -50%); 
+}
+
 .ui-section-form  {
   margin-left: auto;
   margin-right: auto;
@@ -786,3 +823,4 @@ iframe {
     margin-top: 30rem;
   }
 }
+
