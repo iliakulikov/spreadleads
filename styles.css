@@ -296,7 +296,7 @@ input[type="text"] {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 0;
   top: 0;
   right: 0;
   background-color: var(--ui-color-n-900);
@@ -483,11 +483,11 @@ details details summary {
   cursor: pointer;
 }
 .ui-section-close {
-  background-color: var(--ui-color-background-secondary);
-  padding-top: 3rem;
-  padding-bottom: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
   text-align: center;
 }
+
 .reco {
   border-radius: 4px;
 }
@@ -650,6 +650,11 @@ iframe {
   text-align: justify;
 }
 
+.image-align {
+  margin: auto;
+  display: block;
+}
+
 @media screen and (min-width: 28rem) {
   .ui-section-feature .ui-layout-container {
     margin-top: 35rem;
@@ -806,9 +811,6 @@ iframe {
   .ui-section-testimonial {
     padding-bottom: 3rem;
     padding-top: 8rem;
-  }
-  .ui-section-close {
-    padding-top: 5rem;
   }
   .ui-section-footer {
     padding-bottom: 3rem;
