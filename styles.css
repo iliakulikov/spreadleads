@@ -146,6 +146,11 @@ img {
   z-index: 10;
 }
 
+.test-img {
+  z-index: 9;
+  padding: 10px;
+}
+
 .headline-centered {
   text-align: center;
   color: white;
@@ -633,7 +638,9 @@ iframe {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-
+.left-img, .right-img, .arrow-img {
+  width: 50px;
+}
 
 @media screen and (min-width: 28rem) {
   .ui-section-feature .ui-layout-container {
@@ -665,6 +672,10 @@ iframe {
     --ui-gap-hero: 3rem;
     --ui-gap-feature: 3rem;
     --ui-gap-testimonial: 3rem;
+  }
+
+  .left-img, .right-img, .arrow-img {
+    width: 100px;
   }
 
   .ui-layout-column-center,
