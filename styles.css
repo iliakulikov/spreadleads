@@ -99,7 +99,6 @@ a {
 img {
   display: block;
   height: auto;
-  margin: 0 auto;
   max-width: 100%;
 }
 .ui-layout-container {
@@ -640,6 +639,15 @@ iframe {
 
 .left-img, .right-img, .arrow-img {
   width: 50px;
+}
+
+.test123 {
+  display: flex;
+}
+
+.price-explanation {
+  margin-top: 2rem;
+  text-align: justify;
 }
 
 @media screen and (min-width: 28rem) {
