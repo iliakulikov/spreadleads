@@ -153,7 +153,7 @@
                 <div class="img-container">
                   <img src="img/leadform_icon.png" class="left-img" loading="lazy" alt="XXXXXXXXXXXXXXX" width="134" height="168">
                   <img src="img/arrow.png" class="arrow-img" loading="lazy" alt="XXXXXXXXXXXXXXX" width="150" height="74">
-                  <img src="img/spreadsheet_icon.png" class="right-img" loading="lazy" alt="XXXXXXXXXXXXXXX" width="114" height="158">
+                  <img src="img/spreadsheet_icon.png" class="right-img sheet" loading="lazy" alt="XXXXXXXXXXXXXXX" width="114" height="158">
                 </div>
             </div>
           </div>
@@ -162,7 +162,7 @@
             <div> 
               <p class="ui-text-intro">By manually uploading only qualified leads, advertising accounts achieve unmatched clarity with 85-100% conversion attribution. </p>
               <div class="img-container">
-                <img src="img/spreadsheet_icon.png" class="left-img" loading="lazy" alt="XXXXXXXXXXXXXXX" width="114" height="158">
+                <img src="img/spreadsheet_icon.png" class="left-img sheet" loading="lazy" alt="XXXXXXXXXXXXXXX" width="114" height="158">
                 <img src="img/arrow.png" class="arrow-img" loading="lazy" alt="XXXXXXXXXXXXXXX" width="150" height="74">
                 <img src="img/gads_icon.png" class="right-img" loading="lazy" alt="XXXXXXXXXXXXXXX" width="174" height="158">
               </div>
@@ -183,20 +183,21 @@
       </div>
       </section>
 
-      <section class="ui-section-close" id="recommendations">
+      <section class="ui-section-close">
         <div class="ui-layout-container">
           <h2 class="headline-centered">Here's what you get</h2>
+
             <div class="feature-divs">
               <div class="test123">
-                <img src="img/simplicity_icon.png" class="left-img" loading="lazy" alt="XXXXXXXXXXXXXXX" width="" height="">
+                <img src="img/simplicity_icon.png" class="icon-img" loading="lazy" alt="XXXXXXXXXXXXXXX" width="" height="">
                 <p class="ui-text-intro"><strong>Simplicity</strong><br>
-                  No 3rd party clutter - no monthly payments, plugins or APIs. The solution is yours, straightforward and efficient.</p>
+                  No 3rd party clutter - no monthly payments, plugins or APIs. The solution is yours, straightforward and efficient. All what's being used is a Google Spreadsheet and vanilla JavaScript</p>
               </div>
             </div>
 
             <div class="feature-divs">
               <div class="test123">
-                <img src="img/implementation_icon.png" class="left-img" loading="lazy" alt="XXXXXXXXXXXXXXX" width="" height="">
+                <img src="img/implementation_icon.png" class="icon-img" loading="lazy" alt="XXXXXXXXXXXXXXX" width="" height="">
                 <p class="ui-text-intro"><strong>Tailored Implementation</strong><br>
                   I will personally set up the solution for your business, whether it's a WordPress site, plain HTML, or a Web App. You will get project documentation.</p>
               </div>
@@ -204,15 +205,15 @@
             
             <div class="">
               <div class="test123">
-                <img src="img/integration_icon.png" class="left-img" loading="lazy" alt="XXXXXXXXXXXXXXX" width="" height="">
+                <img src="img/integration_icon.png" class="icon-img" loading="lazy" alt="XXXXXXXXXXXXXXX" width="" height="">
                 <p class="ui-text-intro"><strong>Free* Integration</strong><br>
                   That's right, I'm looking for beta testers to integrate SpreadLeads. It'll be free of charge in exchange for feedback and review. Ideally I'm looking for early stage startups aiming to improve their Google Ads leadgen efforts
               
                 </div>
                 <p class="price-explanation"><br><small><strong>* If the app is free, how do you make money?</strong> <br>
-                  Technically speaking, the app is not there yet as I’m building a prototype. I make money through my <a href="https://relevantify.com/"> PPC management company</a> where I’m self employed. Currently SpreadLeads is in the test stage and I want to get feedback and reviews from different leadgen businesses who needs a qualified lead measurement. 
+                  Technically speaking, the app is not there yet as I'm building a prototype. Currently SpreadLeads is being implemented manually, I want to get feedback and reviews from different leadgen businesses who needs a qualified lead measurement. I make money through my <a href="https://relevantify.com/"> PPC management company</a> where I'm self employed. 
                   While the current implementation is manual, I'm keen on automating it in the future, given there's a strong market fit.
-                  Even if I don’t build an app in the end, the solution would be working for years as it’s based on vanilla JavaScript and Google Spreadsheets.</small></p>
+                  Even if I don't build an app in the end, the solution would be working for years as it's based on vanilla JavaScript and Google Spreadsheets.</small></p>
         
             </div>
         </div>
@@ -220,10 +221,10 @@
 
       <section class="ui-section-close">
         <div>
-          <img src="img/trustpilot.png" class="image-align" loading="lazy" alt="XXXXXXXXXXXXXXX" width="250" height="">
+          <img src="img/trustpilot.png" class="image-align" loading="lazy" alt="XXXXXXXXXXXXXXX" width="200" height="">
         </div>
       </section>
-      
+
       <section class="ui-section-test" id="form">
         <div class="ui-section-form ui-layout-column-center">
           <h2 class="headline-centered">Get in touch</h2>
@@ -251,6 +252,7 @@
 
     </main>
 
+    
     <footer role="contentinfo" class="ui-section-footer">
 
       <div class="ui-layout-container">
@@ -259,8 +261,11 @@
             <img width="159" height="29.3" src="img/logo.png" alt="logo"></img>
           </a>
           <nav role="navigation" class="ui-section-footer--nav ui-section-footer--menu ui-layout-flex">
-            <a href="https://spreadleads.com/terms.html"><small>Terms</small></a> 
-            <a href="https://spreadleads.com/privacy.html"><small>Privacy</small></a> 
+            <div class="navdiv">
+              <small>© Relevantify LTD, #712443, Dublin, Ireland</small>
+              <p><a href="https://spreadleads.com/terms.html"><small>Terms</small></a> &nbsp;
+                <a href="https://spreadleads.com/privacy.html"><small>Privacy</small></a> </p>
+            </div>
           </nav>
           <nav role="navigation" class="ui-section-footer--nav ui-section-footer--social ui-layout-flex">
             <a href="https://www.linkedin.com/in/iliakulikov" role="link" aria-label="#">
@@ -269,9 +274,8 @@
           </nav>
         </div>
       </div>
-
     </footer>
-    <script src="app.js"></script>
 
+    <script src="app.js"></script>
   </body>
 </html>

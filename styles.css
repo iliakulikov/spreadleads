@@ -93,7 +93,7 @@ small {
   line-height: 1;
 }
 a {
-  color: #0035f2;
+  color: white;
   cursor: pointer;
 }
 img {
@@ -641,8 +641,25 @@ iframe {
   width: 50px;
 }
 
+.sheet {
+  width: 40px;
+}
+
 .test123 {
   display: flex;
+  align-items: center;
+}
+
+.icon-img {
+  width: 70px;
+  max-width: 100%;
+  height: auto;
+  min-height: 30px;
+  max-height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block; /* block-level element needed for margin:auto to work */
+
 }
 
 .price-explanation {
@@ -654,6 +671,21 @@ iframe {
   margin: auto;
   display: block;
 }
+
+.navdiv {
+  text-align: center;
+}
+
+.background-test {
+  background-image: url(/img/back2.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  /* opacity: 0.5; */
+  z-index: -1;
+}
+
+
 
 @media screen and (min-width: 28rem) {
   .ui-section-feature .ui-layout-container {
@@ -688,7 +720,11 @@ iframe {
   }
 
   .left-img, .right-img, .arrow-img {
-    width: 100px;
+    width: 80px;
+  }
+
+  .sheet {
+    width: 65px;
   }
 
   .ui-layout-column-center,
