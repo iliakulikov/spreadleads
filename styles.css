@@ -645,11 +645,10 @@ iframe {
   text-align: justify;
 }
 
-.image-align {
+.trustpilot-img {
   margin: auto;
   display: block;
-  padding-top: 2rem;
-  padding-bottom: 3rem;
+  padding-top: 10%;
 }
 
 .navdiv {
