@@ -350,31 +350,8 @@ input[type="text"] {
     z-index: -1;  /* this will ensure the pseudo-element sits behind the content */
 }
 
-.ui-section-hero-demo {
-  padding-bottom: 4rem;
-  padding-top: 6rem;
-  text-align: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  color: #fff;
-  height: auto;
-  position: relative;
-}
-
-.ui-section-hero-demo::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url(/img/background_hero.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  opacity: 0.7;
-  z-index: -1;  /* this will ensure the pseudo-element sits behind the content */
+.hero-demo {
+  margin-bottom: -15rem;
 }
 
 .ui-section-hero--image {
@@ -483,7 +460,7 @@ details details summary {
   cursor: pointer;
 }
 .ui-section-close {
-  padding-top: 2rem;
+  padding-top: 6rem;
   padding-bottom: 3rem;
   text-align: center;
 }
@@ -511,20 +488,20 @@ details details summary {
   min-height: 50vh;
   grid-template-columns: 40% 60%;
   grid-template-rows: auto;
+  padding-top: 5rem;
 }
 .left {
   display: inline-block;
   justify-content: center;
   align-items: center;
-  padding-top: 10%;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding: 10%;
   background-image: url(img/pattern_demo.svg);
   background-size: cover;
 }
 .right {
   background-image: linear-gradient(var(--ui-color-brand), #000);
   z-index: 0;
+  display: block;
 }
 
 .loader {
@@ -543,8 +520,9 @@ details details summary {
 .loader-text {
   z-index: -1;
   position: absolute;
-  margin-top: 5%;
+  margin-top: 2rem;
   margin-left: 10%;
+
   color: white;
 }
 
@@ -670,6 +648,8 @@ iframe {
 .image-align {
   margin: auto;
   display: block;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
 }
 
 .navdiv {
@@ -685,7 +665,9 @@ iframe {
   z-index: -1;
 }
 
-
+.ui-section-offer {
+  padding-top: 1rem;
+}
 
 @media screen and (min-width: 28rem) {
   .ui-section-feature .ui-layout-container {
@@ -762,6 +744,10 @@ iframe {
     padding-top: 6rem;
   }
 
+  .hero-demo {
+    padding-bottom: 14rem;
+  }
+
   .ui-section-form  {
   width: calc((var(--ui-layout-grid) * 6) + (var(--ui-layout-gutter) * 5));
   margin-left: auto;
@@ -781,9 +767,6 @@ iframe {
     left: 50%;
     position: absolute;
     transform: translateX(-50%);
-  }
-  .ui-section-demo {
-    min-height: 50vh;
   }
 }
 
@@ -836,6 +819,11 @@ iframe {
     padding-bottom: 24rem;
     padding-top: 10rem;
   }
+
+.hero-demo {
+  padding-bottom: 16rem;
+}
+
   .ui-section-feature {
     padding-bottom: 5rem;
     padding-top: 5rem;
@@ -859,12 +847,18 @@ iframe {
     padding-bottom: 20rem;
     padding-top: 10rem;
   }
+  .hero-demo {
+    padding-bottom: 17rem;
+  }
 }
 
 @media screen and (min-width: 100rem) {
   .ui-section-hero {
     padding-bottom: 26rem;
     padding-top: 10rem;
+  }
+    .hero-demo {
+    padding-bottom: 17rem;
   }
   .ui-section-feature .ui-layout-container {
     margin-top: 35rem;
@@ -875,6 +869,9 @@ iframe {
   .ui-section-hero {
     padding-bottom: 34rem;
     padding-top: 10rem;
+  }
+  .hero-demo {
+    padding-bottom: 17rem;
   }
   .ui-section-feature .ui-layout-container {
     margin-top: 30rem;
