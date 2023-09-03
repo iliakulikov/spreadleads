@@ -18,7 +18,7 @@ window.onload = function getGclid() {
 
 // Post to spreadsheets and redirect on success
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbwSQ8d_RAsYQH7WkQvisS5VXnKht2ocD-UFHaEDz71UbsLVcZFGKDDjmF0UjRrIS0F0/exec";
+  "https://script.google.com/macros/s/AKfycbyxCWwY05-XNIuBgAE5mOJA8A6BzuRa_-K_HfUALk06PbAhSPaPRPmlSrBMHDQGq40t/exec";
 const form = document.forms["submit-to-google-sheet"];
 
 document.forms["submit-to-google-sheet"].addEventListener(
