@@ -9,16 +9,6 @@ function getParameterByName(name, url) {
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-// Replace content dynamically using query string
-var switchContent = document.getElementsByClassName("switch-content");
-for (var i = 0; i < switchContent.length; i++) {
-  dynamicKey = switchContent[i].getAttribute("data-switch-key");
-
-  if (dynamicKey) dynamicContent = getParameterByName(dynamicKey);
-
-  if (dynamicContent) switchContent[i].textContent = dynamicContent;
-}
-
 // get GCLID
 window.onload = function getGclid() {
   var value = getParameterByName("gclid");
@@ -28,7 +18,7 @@ window.onload = function getGclid() {
 
 // Post to spreadsheets and redirect on success
 const scriptURL =
-  "https://script.google.com/macros/s/XXXXXXXXXXXXXXX/exec";
+  "https://script.google.com/macros/s/AKfycbwSQ8d_RAsYQH7WkQvisS5VXnKht2ocD-UFHaEDz71UbsLVcZFGKDDjmF0UjRrIS0F0/exec";
 const form = document.forms["submit-to-google-sheet"];
 
 document.forms["submit-to-google-sheet"].addEventListener(
@@ -45,7 +35,7 @@ document.forms["submit-to-google-sheet"].addEventListener(
       fetch(scriptURL, { method: "POST", body: new FormData(form) })
         .then((response) => {
           // On success, redirect to thankyou page
-          window.location.href = "https://spreadleads.com/thankyou.html";
+          window.location.href = "/thankyou.html";
         })
         .catch((error) => {
           document.getElementById("spinner").style.display = "none";
