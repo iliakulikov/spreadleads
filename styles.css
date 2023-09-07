@@ -137,17 +137,17 @@ img {
   margin-right: 1rem; /* adjust the value as you see fit */
 }
 
-.mac {
-  position: absolute;
-  top: calc(100% + 2rem); /* This positions it at the bottom of the container + 2rem */
-  left: 50%;
-  transform: translateX(-50%);
+.demo-video {
+  width: calc(100% - 2rem); /* New: Set width minus the 1rem gap on both sides */
+  margin-top: 4rem; /* New: Add a 1rem gap on both left and right sides */
   z-index: 10;
+  /* padding: 10px; */
+  box-sizing: border-box; /* New: Include padding in width calculation */
 }
 
-.test-img {
-  z-index: 9;
-  padding: 10px;
+.demo-video video { /* This targets the video element inside .demo-video */
+  width: 100%; /* New: Make sure the video adjusts its width to the container */
+  height: auto; /* New: This keeps the video's aspect ratio while it scales */
 }
 
 .headline-centered {
@@ -159,6 +159,9 @@ img {
 
 .ui-layout-column-6.ui-layout-column-center {
   position: relative;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
 }
 
 .ui-section-feature .ui-layout-container {
@@ -323,7 +326,7 @@ input[type="text"] {
   margin-left: 50px;
 }
 .ui-section-hero {
-  margin-bottom: -20rem;  /* This reduces the bottom space by the same amount the image is adjusted. */
+  margin-bottom: -34rem;  /* This reduces the bottom space by the same amount the image is adjusted. */
   padding-bottom: 14rem;
   padding-top: 6rem;
   text-align: center;
@@ -368,7 +371,6 @@ input[type="text"] {
 }
 .ui-section-feature {
   padding-bottom: 5rem;
-  /* padding-top: 3rem; */
 }
 .ui-section-test {
   height: auto;
@@ -668,23 +670,17 @@ iframe {
   padding-top: 1rem;
 }
 
-
-@media screen and (min-width: 28rem) {
-  .ui-section-feature .ui-layout-container {
-    margin-top: 35rem;
-  }
-}
-
 @media screen and (min-width: 33rem) {
   .ui-section-feature .ui-layout-container {
     margin-top: 40rem;
   }
-}
-
-@media screen and (min-width: 39rem) {
-  .ui-section-feature .ui-layout-container {
-    margin-top: 45rem;
+  .ui-section-hero {
+    margin-bottom: -44rem;
   }
+  .hero-demo {
+    margin-bottom: -15rem;
+  }
+  
 }
 
 @media screen and (min-width: 48rem) {
@@ -735,9 +731,6 @@ iframe {
     padding-top: 2rem;
   }
 
-  .ui-section-feature .ui-layout-container {
-    margin-top: 35rem;
-  }
 
   .ui-section-hero {
     padding-bottom: 18rem;
@@ -767,12 +760,6 @@ iframe {
     left: 50%;
     position: absolute;
     transform: translateX(-50%);
-  }
-}
-
-@media screen and (min-width:61rem) {
-  .ui-section-feature .ui-layout-container {
-    margin-top: 45rem;
   }
 }
 
@@ -815,19 +802,11 @@ iframe {
     padding-bottom: 2rem;
     padding-top: 3rem;
   }
-  .ui-section-hero {
-    padding-bottom: 24rem;
-    padding-top: 10rem;
-  }
 
 .hero-demo {
   padding-bottom: 16rem;
 }
 
-  .ui-section-feature {
-    padding-bottom: 5rem;
-    padding-top: 5rem;
-  }
   .ui-component-list-feature {
     column-gap: var(--ui-layout-gutter);
     grid-template-columns: repeat(2, 1fr);
@@ -854,11 +833,14 @@ iframe {
 
 @media screen and (min-width: 100rem) {
   .ui-section-hero {
-    padding-bottom: 26rem;
+    margin-bottom: -37rem;
     padding-top: 10rem;
   }
     .hero-demo {
     padding-bottom: 17rem;
+  }
+  .hero-demo {
+    margin-bottom: -15rem;
   }
   .ui-section-feature .ui-layout-container {
     margin-top: 35rem;
@@ -867,11 +849,7 @@ iframe {
 
 @media screen and (min-width: 120rem) {
   .ui-section-hero {
-    padding-bottom: 34rem;
     padding-top: 10rem;
-  }
-  .hero-demo {
-    padding-bottom: 17rem;
   }
   .ui-section-feature .ui-layout-container {
     margin-top: 30rem;
