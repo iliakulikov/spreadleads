@@ -138,7 +138,7 @@ img {
 }
 
 .demo-video {
-  width: calc(100% - 2rem); /* New: Set width minus the 1rem gap on both sides */
+  width: 100%; 
   margin-top: 4rem; /* New: Add a 1rem gap on both left and right sides */
   /* padding: 10px; */
   box-sizing: border-box; /* New: Include padding in width calculation */
