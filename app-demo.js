@@ -18,7 +18,7 @@ function getParameterByName(name, url) {
   
   // Post to spreadsheets and redirect on success
   const scriptURL =
-    "https://script.google.com/macros/s/AKfycbzIyV5JzsKOL30Dqjc02Dly-4iw-vzU34QHoGxcc5wSWT_TRV0DyLnyEIJqp7nVw6CM/exec";
+    "https://script.google.com/macros/s/AKfycbxuIGOI9fb1VTeXAwnIDnysD_gfzjkSA0lFYnk1vTD1aa_HPUJ7833Rz9O0k8rBVdxo/exec";
   const form = document.forms["submit-to-google-sheet"];
   
   document.forms["submit-to-google-sheet"].addEventListener(
